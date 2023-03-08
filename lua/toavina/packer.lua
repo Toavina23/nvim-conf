@@ -39,9 +39,11 @@ vim.cmd [[packadd packer.nvim]]
 		  }
 	  }
       use({"ckipp01/stylua-nvim"})
-     use("jose-elias-alvarez/null-ls.nvim") 
-     use {
-	"windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-} 
+      use("jose-elias-alvarez/null-ls.nvim") 
+      use {
+          "windwp/nvim-autopairs",
+          config = function() require("nvim-autopairs").setup {} end
+      } 
+      use('neovim/nvim-lspconfig')
+      use('MunifTanjim/prettier.nvim')
   end)

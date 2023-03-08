@@ -1,9 +1,13 @@
 local null_ls = require("null-ls")
+
 local formatting = null_ls.builtins.formatting
 
-formatting.sources = {
-    formatting.prettier,
-    formatting.stylua
-}
+local diagnostics = null_ls.builtins.diagnostics
 
-null_ls.setup({sources = sources})
+null_ls.setup({
+    debug = false,
+    sources = {
+        formatting.prettier,
+        diagnostics.eslint
+    }
+})
