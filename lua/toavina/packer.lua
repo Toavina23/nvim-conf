@@ -46,4 +46,5 @@ vim.cmd [[packadd packer.nvim]]
       } 
       use('neovim/nvim-lspconfig')
       use('MunifTanjim/prettier.nvim')
+      
   end)
